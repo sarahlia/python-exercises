@@ -1,7 +1,9 @@
+# print statements
 print(5 == (10/2))
 print(5 > 5)
 print(3 != 4)
 
+# grouping
 friends = ["Bob", "Anne"]
 abroad = ["Bob", "Anne"]
 new_list = friends
@@ -23,9 +25,12 @@ day_of_week = input("What day of the week is it today?").lower()
 #     print("Have a great start to your week!")
 # print("This msg has nothing to do with the if statement, so will always be shown.")
 
+# running if statement :
 if day_of_week == "monday":
     print("Have a great start to your week!")
 elif day_of_week == "tuesday":
     print("It is Tuesday.")
 else:
     print("At least the worst is behind you!")
+    
+# ===== Code Ended =====
