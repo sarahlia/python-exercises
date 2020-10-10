@@ -31,3 +31,40 @@ def apply(*args, operator):
 
 print(apply(1, 3, 6, 7, operator="+")) #17
 print(apply(1, 3, 5, 6, operator="*")) #90
+
+########Part 2########
+def named(**kwargs):
+    print(kwargs)
+
+named(name="Bob", age=25)
+
+
+# def named(name, age):
+#     print(name, age)
+#
+# details = {"name": "Bob", "age": 25}
+#
+# named(**details) #output: Bob 25
+
+def print_nicely(**kwargs):
+    # named(**kwargs)
+    for arg, value in kwargs.items():
+        print(f"{arg}: {value}")
+
+print_nicely(name="Bob", age=25)
+
+
+def both(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+both(1, 3, 5, name="Bob", age=25) # 1, 3, 5 (positional arguments) will be collected into args; name="Bob", age=25 (named argument) will be collected into kwargs.
+
+
+def myfunction(**kwargs):
+    print(kwargs)
+    # for arg, value in kwargs.items():
+        # print(f"{arg} -- {value}")
+# myfunction(**"Bob") #Error, must be mapping. Not a dictionary.
+# myfunction(**None) #Error
+myfunction(student="laura", grade=97) #This is ok.
